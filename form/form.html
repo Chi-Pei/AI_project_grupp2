@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit an adress</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <form action="results.html" method="GET">
+    <div class="form-box">
+      <label for="input-street">Street name</label>
+      <input type="text" id="input-street" autofocus placeholder="Street name"> 
+    </div>
+    
+    <div class="form-box">
+      <label for="input-number">Street number</label>
+      <input type="text" id="input-number" autofocus placeholder="Street number" min="1">
+    </div>
+    
+    <div class="form-box"> 
+      <label for="input-long">Longitude</label>
+      <input type="text" id="input-long" autofocus placeholder="Longitude">
+    </div>
+    
+    <div class="form-box">
+      <label for="input-lat">Latitude</label>
+      <input type="text" id="input-lat" autofocus placeholder="Latitude">
+    </div>
+
+    <div class="form-box">
+      <button type="submit">Submit</button> 
+      <button type="reset">Reset</button>
+    </div>
+
+  </form>
+</body>
+</html>
