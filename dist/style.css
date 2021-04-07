@@ -67,7 +67,8 @@ label #cancel{
 }
 
 #map{
-  height: 700px;
+  position: relative;
+  height: 800px;
   width: 100%;
-
+  z-index: 1;
 }
