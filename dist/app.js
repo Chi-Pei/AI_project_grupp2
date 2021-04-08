@@ -29,6 +29,7 @@ function initMap() {
     
     marker = new google.maps.Marker({
       position: mapsMouseEvent.latLng,
+      animation: google.maps.Animation.DROP,
     });
     marker.setMap(map);
 
