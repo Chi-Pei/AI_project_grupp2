@@ -15,8 +15,8 @@ app.static('/', './dist/')
 
 @app.post('/api/prediction')
 async def handler(req):
-  # print(req.json)
-  prediction = predict(req.json['k'])
+  print(req.json)
+  prediction = predict([req.json['type1'],req.json['type2'],req.json['type3'],req.json['rooms'],req.json['dist'],req.json['bathroom'],req.json['car'],req.json['landsize'],req.json['buildingarea'],req.json['yearbuilt'],req.json['long'],req.json['lat'],req.json['propertycount'],req.json['cluster']])
   # print(prediction)
   return response.json(prediction)
 

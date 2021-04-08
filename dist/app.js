@@ -7,13 +7,10 @@ function initMap() {
     mapTypeControl: false
   }
 
-
   map = new google.maps.Map(document.getElementById('map'), {
 
     options
   });
-
-
 
   let infoWindow = new google.maps.InfoWindow({
     content: "Click the map to get price estimates!",
@@ -21,8 +18,6 @@ function initMap() {
   });
 
   let form = {
-
-    
   }
 
   infoWindow.open(map);
@@ -33,8 +28,6 @@ function initMap() {
       position: mapsMouseEvent.latLng,
     });
 
-
-
     infoWindow.setContent(
       JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
       //"Test"
@@ -43,3 +36,37 @@ function initMap() {
   });
 
 }
+
+$('#submit').click(async function(event) {
+  event.preventDefault();
+  let street = $('#input-street').val()
+  let number = $('#input-number').val()
+  let long = $('#input-long').val()
+  let lat = $('#input-lat').val()
+  console.log("click")
+  let valuesToSend = {
+    type1: 1,
+    type2: 0,
+    type3: 0,
+    rooms: 2,
+    dist: 2.5,
+    bathroom: 1,
+    car: 1,
+    landsize: 202,
+    buildingarea: 156,
+    yearbuilt: 1966,
+    long: 145,
+    lat: -37,
+    propertycount: 4019,
+    cluster: 9
+  }
+
+  let res = await fetch('/api/prediction', {
+    method: 'POST',
+    body: JSON.stringify(valuesToSend)
+  })
+
+  let prediction = await res.json()
+  console.log(prediction)
+  $('#result').html("this is the prediction: " + prediction.predicted)
+})

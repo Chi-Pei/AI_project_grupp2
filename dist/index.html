@@ -6,6 +6,7 @@
     <title>Melbourne Price Estimates</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles-form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
 </head>
@@ -13,18 +14,47 @@
 <body>
     <input type="checkbox" id="check">
     <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>Melbourne Estimates</header>
-</div>
-</body>
-
-<body>
+        <header>Melbourne Estimates</header>
+        <!--<form action="results.html" method="GET">--->
+        <form>
+            <div class="form-box">
+              <label for="input-street">Street name</label>
+              <input type="text" id="input-street" autofocus placeholder="Street name"> 
+            </div>
+            
+            <div class="form-box">
+              <label for="input-number">Street number</label>
+              <input type="text" id="input-number" autofocus placeholder="Street number" min="1">
+            </div>
+            
+            <div class="form-box"> 
+              <label for="input-long">Longitude</label>
+              <input type="text" id="input-long" autofocus placeholder="Longitude">
+            </div>
+            
+            <div class="form-box">
+              <label for="input-lat">Latitude</label>
+              <input type="text" id="input-lat" autofocus placeholder="Latitude">
+            </div>
+        
+            <div class="form-box">
+              <button type="button" id="submit">Submit</button> 
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+          <div id="result"></div>
+    </div>
 
     <div id="map"></div>
-
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
     <script src="app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnR71JYpXg_ndYm3MdeEForA6zza1YpEs&callback=initMap"></script>
 </body>
