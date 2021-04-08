@@ -6,24 +6,25 @@ form{
             margin: 20px;
             width: 100%;
         }
+
         .form-box{
             padding: 20px;
             clear: both;
             width: 100%;
             position: relative;
-    
         }
+
         .form-box label{
             font-size: 15px;
             float: left;
             width: 150px;
-            margin-right: 20px;
         }
+
         .form-box input{
             font-size: 12px;
             width: 250px;
             height: 15px;
-            padding: 10px;
+       
         }
        
         .form-box button{
@@ -34,12 +35,4 @@ form{
             color: white;
             background-color: cornflowerblue;
             cursor: pointer;
-
-        }
-
-        .form-box select{
-            font-size: 15px;
-            width: 285px;
-            height: 15px;
-            padding: 10px;
         }

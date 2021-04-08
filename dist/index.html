@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles-form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
 </head>
+
+
 
 <body>
     <input type="checkbox" id="check">
@@ -22,13 +23,20 @@
         <!--<form action="results.html" method="GET">--->
 
         <form>
+            
             <div class="form-box">
-              <label for="input-type">Type</label>
-              <select name="type" id="type">
-              <option value="h">House, cottage, villa, semi, terrace</option>
-              <option value="u">Unit, duplex</option>
-              <option value="t">Townhouse</option>
-              </select>
+              <label for="input-typeH">House, cottage, villa, semi or terrace</label>
+              <input type="radio" name="type" id="input-typeHouse" value=1>
+            </div>
+
+            <div class="form-box">
+              <label for="input-typeU">Unit, duplex</label>
+              <input type="radio" name="type" id="input-typeUnit" value=1>
+            </div>
+
+            <div class="form-box">
+              <label for="input-typeT">Townhouse</label>
+              <input type="radio" name="type" id="input-typeTownhouse" value=1>
             </div>
 
             <div class="form-box">
