@@ -71,9 +71,7 @@ $('#submitBtn').click(async function(event) {
     buildingarea: buildingArea,
     yearbuilt: yearBuilt,
     long: long,
-    lat: -lat,
-    propertycount: propertyCount,
-    cluster: 9
+    lat: lat
   }
 
   let res = await fetch('/api/prediction', {
