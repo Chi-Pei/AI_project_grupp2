@@ -70,8 +70,8 @@ $('#submitBtn').click(async function(event) {
     landsize: landsize,
     buildingarea: buildingArea,
     yearbuilt: yearBuilt,
-    long: 145,
-    lat: -37,
+    long: long,
+    lat: -lat,
     propertycount: propertyCount,
     cluster: 9
   }
