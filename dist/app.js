@@ -19,9 +19,6 @@ function initMap() {
     position: { lat: -37.814, lng: 144.96332 },
   });
 
-  let form = {
-  }
-
   infoWindow.open(map);
   map.addListener("click", (mapsMouseEvent) => {
     infoWindow.close();
@@ -52,6 +49,7 @@ $('#submitBtn').click(async function(event) {
 
   let distance = $('#input-distance').val()
   let bathrooms = $('#input-bathroom').val()
+  let rooms = $('#input-numberOfRooms').val()
   let car = $('#input-car').val()
   let landsize = $('#input-landsize').val()
   let buildingArea = $('#input-buildingArea').val()
@@ -63,7 +61,7 @@ $('#submitBtn').click(async function(event) {
     type1: 1,
     type2: 0,
     type3: 0,
-    rooms: 2,
+    rooms: rooms,
     dist: distance,
     bathroom: bathrooms,
     car: car,

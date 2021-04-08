@@ -24,8 +24,7 @@ async def handler(req):
   dist_result = find_nearest(int(float(lat)), int(float(long)))
   cluster_nr = dist_result[0]
   propertycount = dist_result[1]
-  print("Cluster nr:")
-  print(cluster_nr)
+
   prediction = predict([req.json['type1'],req.json['type2'],req.json['type3'],req.json['rooms'],req.json['dist'],req.json['bathroom'],req.json['car'],req.json['landsize'],req.json['buildingarea'],req.json['yearbuilt'],req.json['long'],req.json['lat'],propertycount,cluster_nr])
   # print(prediction)
   return response.json(prediction)
