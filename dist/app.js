@@ -4,7 +4,8 @@ function initMap() {
 
     center: { lat: -37.814, lng: 144.96332 },
     zoom: 10,
-    mapTypeControl: false
+    mapTypeControl: false,
+    fullscreenControl: false
   }
 
 
@@ -20,10 +21,6 @@ function initMap() {
     position: { lat: -37.814, lng: 144.96332 },
   });
 
-  let form = {
-
-    
-  }
 
   infoWindow.open(map);
   map.addListener("click", (mapsMouseEvent) => {
