@@ -14,28 +14,23 @@ function initMap() {
     options
   });
 
-  let infoWindow = new google.maps.InfoWindow({
-    content: "Click the map to get price estimates!",
+  let marker = new google.maps.Marker({
+    //content: "Click the map to get price estimates!",
     position: { lat: -37.814, lng: 144.96332 },
   });
+  marker.setMap(map);
 
-  infoWindow.open(map);
   map.addListener("click", (mapsMouseEvent) => {
-    infoWindow.close();
-
+    if (marker && marker.setMap) marker.setMap(null);
     selectedPosition = mapsMouseEvent.latLng
     $('#input-long').val(selectedPosition.lat)
     $('#input-lat').val(selectedPosition.lng)
     
-    infoWindow = new google.maps.InfoWindow({
+    marker = new google.maps.Marker({
       position: mapsMouseEvent.latLng,
     });
+    marker.setMap(map);
 
-    infoWindow.setContent(
-      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
-      //"Test"
-    );
-    infoWindow.open(map);
   });
 
 }
