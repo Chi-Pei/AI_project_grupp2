@@ -20,7 +20,17 @@
     <div class="sidebar">
         <header>Melbourne Estimates</header>
         <!--<form action="results.html" method="GET">--->
+
         <form>
+            <div class="form-box">
+              <label for="input-type">Type</label>
+              <select name="type" id="type">
+              <option value="h">House, cottage, villa, semi, terrace</option>
+              <option value="u">Unit, duplex</option>
+              <option value="t">Townhouse</option>
+              </select>
+            </div>
+
             <div class="form-box">
                 <label for="input-street">Street adress</label>
                 <input type="text" id="input-streetAdress" autofocus placeholder="Street adress"> 
@@ -28,7 +38,7 @@
               
               <div class="form-box">
                 <label for="input-number">Number of rooms</label>
-                <input type="text" id="input-numberOfRooms" autofocus placeholder="input-numberOfRooms" min="1">
+                <input type="text" id="input-numberOfRooms" autofocus placeholder="Number of rooms" min="1">
               </div>
           
               <div class="form-box">
