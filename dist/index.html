@@ -22,29 +22,69 @@
         <!--<form action="results.html" method="GET">--->
         <form>
             <div class="form-box">
-              <label for="input-street">Street name</label>
-              <input type="text" id="input-street" autofocus placeholder="Street name"> 
-            </div>
-            
-            <div class="form-box">
-              <label for="input-number">Street number</label>
-              <input type="text" id="input-number" autofocus placeholder="Street number" min="1">
-            </div>
-            
-            <div class="form-box"> 
-              <label for="input-long">Longitude</label>
-              <input type="text" id="input-long" autofocus placeholder="Longitude">
-            </div>
-            
-            <div class="form-box">
-              <label for="input-lat">Latitude</label>
-              <input type="text" id="input-lat" autofocus placeholder="Latitude">
-            </div>
-        
-            <div class="form-box">
-              <button type="button" id="submit">Submit</button> 
-              <button type="reset">Reset</button>
-            </div>
+                <label for="input-street">Street adress</label>
+                <input type="text" id="input-streetAdress" autofocus placeholder="Street adress"> 
+              </div>
+              
+              <div class="form-box">
+                <label for="input-number">Number of rooms</label>
+                <input type="text" id="input-numberOfRooms" autofocus placeholder="input-numberOfRooms" min="1">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-price">Price</label>
+                <input type="text" id="input-price" autofocus placeholder="Price" min="1">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-distance">Distance from CBD</label>
+                <input type="text" id="input-distance" autofocus placeholder="Distance from CBD in kilometers" min="1">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-bathroom">Bathroom</label>
+                <input type="text" id="input-bathroom" autofocus placeholder="Number of bathrooms" min="1">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-car">Car</label>
+                <input type="text" id="input-car" autofocus placeholder="Number of car spots">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-landsize">Landsize</label>
+                <input type="text" id="input-landsize" autofocus placeholder="Landsize in meters" min="1">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-buildingArea">Building Area</label>
+                <input type="text" id="input-buildingArea" autofocus placeholder="Building size in meters" min="1">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-yearBuilt">Year built</label>
+                <input type="text" id="input-yearBuilt" autofocus placeholder="Year the house was built" min="1196">
+              </div>
+          
+              <div class="form-box">
+                <label for="input-propertyCount">Property Count</label>
+                <input type="text" id="input-propertyCount" autofocus placeholder="Number of properties that exist in the suburb" min="1">
+              </div>
+              
+              <div class="form-box"> 
+                <label for="input-long">Longitude</label>
+                <input type="text" id="input-long" autofocus placeholder="Longitude">
+              </div>
+              
+              <div class="form-box">
+                <label for="input-lat">Latitude</label>
+                <input type="text" id="input-lat" autofocus placeholder="Latitude">
+              </div>
+          
+              <div class="form-box">
+                <button id="submitBtn" type="button">Submit</button> 
+                <button type="reset">Reset</button>
+              </div>
           </form>
           <div id="result"></div>
     </div>

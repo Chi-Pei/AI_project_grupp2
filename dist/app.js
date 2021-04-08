@@ -1,3 +1,5 @@
+let selectedPosition;
+
 function initMap() {
 
   let options = {
@@ -23,6 +25,10 @@ function initMap() {
   infoWindow.open(map);
   map.addListener("click", (mapsMouseEvent) => {
     infoWindow.close();
+
+    selectedPosition = mapsMouseEvent.latLng
+    $('#input-long').val(selectedPosition.lat)
+    $('#input-lat').val(selectedPosition.lng)
     
     infoWindow = new google.maps.InfoWindow({
       position: mapsMouseEvent.latLng,
@@ -37,7 +43,7 @@ function initMap() {
 
 }
 
-$('#submit').click(async function(event) {
+$('#submitBtn').click(async function(event) {
   event.preventDefault();
   let street = $('#input-street').val()
   let number = $('#input-number').val()
