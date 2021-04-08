@@ -49,21 +49,30 @@ $('#submitBtn').click(async function(event) {
   let number = $('#input-number').val()
   let long = $('#input-long').val()
   let lat = $('#input-lat').val()
+
+  let distance = $('#input-distance').val()
+  let bathrooms = $('#input-bathroom').val()
+  let car = $('#input-car').val()
+  let landsize = $('#input-landsize').val()
+  let buildingArea = $('#input-buildingArea').val()
+  let yearBuilt = $('#input-yearBuilt').val()
+  let propertyCount = $('#input-propertyCount').val()
+
   console.log("click")
   let valuesToSend = {
     type1: 1,
     type2: 0,
     type3: 0,
     rooms: 2,
-    dist: 2.5,
-    bathroom: 1,
-    car: 1,
-    landsize: 202,
-    buildingarea: 156,
-    yearbuilt: 1966,
+    dist: distance,
+    bathroom: bathrooms,
+    car: car,
+    landsize: landsize,
+    buildingarea: buildingArea,
+    yearbuilt: yearBuilt,
     long: 145,
     lat: -37,
-    propertycount: 4019,
+    propertycount: propertyCount,
     cluster: 9
   }
 
