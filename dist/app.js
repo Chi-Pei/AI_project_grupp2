@@ -1,9 +1,5 @@
 let selectedPosition;
 
-let type = document.querySelector('select').value
-console.log(type)
-  
-
 function initMap() {
 
   let options = {
@@ -56,11 +52,30 @@ $('#submitBtn').click(async function(event) {
   let buildingArea = $('#input-buildingArea').val()
   let yearBuilt = $('#input-yearBuilt').val()
   let propertyCount = $('#input-propertyCount').val()
-  let type1 = $('#"input-typeHouse"').val()
-  let type2 = $('#"input-typeUnit"').val()
-  let type3 = $('#"input-typeTownhouse"').val()
+  let type = $('#type').val()
 
-  console.log("click")
+  switch(type) {
+    case "h":
+      type1 = 1
+      type2 = 0
+      type3 = 0
+      break;
+    case "u":
+      type1 = 0
+      type2 = 1
+      type3 = 0
+      break;
+    case "t":
+      type1 = 0
+      type2 = 0
+      type3 = 1
+        break;
+    default:
+      type1 = 0
+      type2 = 0
+      type3 = 0
+  }
+
   let valuesToSend = {
     type1: type1,
     type2: type2,
@@ -75,7 +90,7 @@ $('#submitBtn').click(async function(event) {
     long: long,
     lat: lat
   }
-
+  
   let res = await fetch('/api/prediction', {
     method: 'POST',
     body: JSON.stringify(valuesToSend)
@@ -83,5 +98,5 @@ $('#submitBtn').click(async function(event) {
 
   let prediction = await res.json()
   console.log(prediction)
-  $('#result').html("this is the prediction: " + prediction.predicted)
+  $('#result').html("Result: " + prediction.predicted)
 })

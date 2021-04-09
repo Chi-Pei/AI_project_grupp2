@@ -26,4 +26,4 @@ def train():
 def predict(values):
     predicition = regressor.predict(sc.transform([values]))
     
-    return { "predicted":str(predicition[0]) }
+    return { "predicted":str(predicition[0]), "result": "" }

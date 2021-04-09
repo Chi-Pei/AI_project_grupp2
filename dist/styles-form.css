@@ -36,3 +36,9 @@ form{
             background-color: cornflowerblue;
             cursor: pointer;
         }
+        .form-box select{
+            font-size: 15px;
+            width: 250px;
+            height: 15px;
+            padding: 10px;
+        }
