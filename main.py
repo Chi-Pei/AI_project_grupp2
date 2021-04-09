@@ -13,15 +13,15 @@ app.static('/', './dist/')
 
 @app.post('/api/prediction')
 async def handler(req):
-
-  long = req.json['long']
-  lat = req.json['lat']
-
+  
   keys = list(req.json.keys())
 
   for i in range(0, len(keys)):
     if(req.json[keys[i]] == ''):
       return response.json( { "predicted": "Missing values"} )
+
+  long = req.json['long']
+  lat = req.json['lat']
 
   dist_result = find_nearest(int(float(lat)), int(float(long)))
   cluster_nr = dist_result[0]
