@@ -28,6 +28,23 @@ body {
   user-select: none;
 }
 
+.sidebar nav{
+  line-height: 35px;
+  text-align: center;
+  background: #00000095;
+  font-size: 16px white;
+}
+
+.sidebar nav a:visited, a:active{
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover{
+  color: blue;
+  transition: 0,3s;
+}
+
 #check{
   display: none;
 }
@@ -77,3 +94,4 @@ html, body {
   width: 100%;
   z-index: 1;
 }
+
