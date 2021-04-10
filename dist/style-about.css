@@ -6,7 +6,7 @@
 }
 
 body{
-  background-image: url(/images/Melbourne2.jpg);
+  background-image: url(/images/Melbourne.jpg);
   
   font-family: 'Roboto', sans-serif;
   color:white;
@@ -19,7 +19,6 @@ body{
 main{
   background: #7e7d7dcb;
   padding: 30px;
-  
   border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
