@@ -98,5 +98,17 @@ $('#submitBtn').click(async function(event) {
 
   let prediction = await res.json()
   console.log(prediction)
-  $('#result').html("Result: " + prediction.predicted)
+  $('#.popup-content').html("Result: " + prediction.predicted)
 })
+
+document.getElementById('submitBtn').addEventListener('click',
+function(){
+
+  document.querySelector('.popup-bg').style.display = 'flex';
+})
+
+document.querySelector('.popup-close').addEventListener('click', 
+function(){
+
+  document.querySelector('.popup-bg').style.display = 'none';
+});
