@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: -400px;
+  width: 400px;
+  height: 100%;
+  background: #0000006f;
+  transition: all .5s ease;
+  z-index: 10;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar header {
+  font-size: 22px;
+  color: rgb(250, 250, 250);
+  line-height: 70px;
+  text-align: center;
+  background: #00000095;
+  user-select: none;
+}
+
+.sidebar nav{
+  line-height: 35px;
+  text-align: center;
+  background: #00000095;
+  font-size: 16px white;
+}
+
+.sidebar nav a:visited, a:active{
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover{
+  color: blue;
+  transition: 0,3s;
+}
+
+#check{
+  display: none;
+}
+
+label #btn,label #cancel{
+  position: absolute;
+  background: #00000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 40px;
+  font-size: 35px;
+  color: rgb(74, 74, 74);
+  padding: 6px 12px;
+  transition: all .5s;
+  z-index: 10;
+}
+label #cancel{
+  z-index: 11;
+  left: -250px;
+  top: 16px;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 340px;
+}
+
+html, body{
+  height: 100%;
+}
+
+#map{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.popup-bg{
+
+  width: 100%;
+  height: 100%;
+  background-color: #00000095;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 2;
+}
+
+.popup-content{
+
+  width: 500px;
+  height: 300px;
+  background-color: #000000a5;
+  border-radius: 6px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.popup-close{
+
+  position: absolute;
+  right: 15px;
+  font-size: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color:rgb(250, 250, 250);
+}
+
